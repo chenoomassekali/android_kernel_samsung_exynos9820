@@ -1,0 +1,8 @@
+config 88XXAU
+tristate "Realtek RTL8814AU/8812AU/8821AU USB WiFi"
+depends on USB
+default n
+help
+  Driver for Realtek RTL8814AU/8812AU/8821AU USB WiFi adapters
+  (aircrack-ng fork), including monitor mode and packet injection
+  support. Used for the COMFAST CF-938AC adapter.
