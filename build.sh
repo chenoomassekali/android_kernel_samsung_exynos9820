@@ -8,9 +8,9 @@ export AIK_DIR=${ANDROID_BUILD_TOP}/prebuilts/AIK
 export OUT_DIR=${ANDROID_BUILD_TOP}/out
 
 # Import KernelSU-Next driver
-if [ "${MODE}" == 'ksun' ]; then
-    curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/legacy/kernel/setup.sh" | bash -s legacy
-fi
+#if [ "${MODE}" == 'ksun' ]; then
+#    curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/legacy/kernel/setup.sh" | bash -s legacy
+#fi
 
 # Define specific variables
 case ${DEVICE} in
@@ -115,8 +115,8 @@ O=out
 
 DEFCONFIG="exynos9820-${DEVICE}_defconfig ${SOC}.config"
 
-if [ "${MODE}" == "ksun" ]; then
-    CONFIGS="${DEFCONFIG} kernelsu.config"
+#if [ "${MODE}" == "ksun" ]; then
+#    CONFIGS="${DEFCONFIG} kernelsu.config"
 else
     CONFIGS="${DEFCONFIG}"    
 fi
