@@ -115,15 +115,7 @@ O=out
 
 DEFCONFIG="exynos9820-${DEVICE}_defconfig ${SOC}.config"
 
-#if [ "${MODE}" == "ksun" ]; then
-#    CONFIGS="${DEFCONFIG} kernelsu.config"
-else
-    CONFIGS="${DEFCONFIG}"    
-fi
-
-make ${MAKE_ARGS} ${CONFIGS} || exit 1
-make ${MAKE_ARGS} || exit 1
-
+    CONFIGS="${DEFCONFIG}"
 # Cooking Ramdisk
 cp ${ANDROID_BUILD_TOP}/prebuilts/ramdisk_prop/${DEVICE}.prop ${AIK_DIR}/ramdisk/system/etc/ramdisk/build.prop
 cd ${AIK_DIR}/ramdisk
